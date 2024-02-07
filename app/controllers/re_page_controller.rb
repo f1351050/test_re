@@ -1,0 +1,2 @@
+class RePageController < ApplicationController
+end

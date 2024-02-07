@@ -1,0 +1,6 @@
+<div>
+    <%= form_tag('/re_page', method: :post) do %>
+      <input type="text" id="name">
+      <input type="submit">
+    <% end %>
+  </div>
