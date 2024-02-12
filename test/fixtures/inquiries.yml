@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tempo_name: MyString
+  manager: MyString
+  email: MyString
+
+two:
+  tempo_name: MyString
+  manager: MyString
+  email: MyString
