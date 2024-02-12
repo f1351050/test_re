@@ -1,7 +1,8 @@
 
-<% @inquiry.each do |i| %>
-    <p>テナント名:</p> 
-    <%= i.tempo_name %>
-    <p>担当者名</p>
-    <%= i.
+<p>確認画面</p>
+<%= form_tag ("/re_page/conf") do %>
+    店舗名：<%= session[:tempo_name] %>さん<br>
+    担当者名：<%= session[:manager] %><br>
+    メールアドレス：<%= session[:email] %><br>
+    <input type="submit" value="送信">
 <% end %>

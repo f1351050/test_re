@@ -1,4 +1,17 @@
 
+<%= form_for(:session,url: "./create") do |f| %>
+  <%= f.label :tempo %>
+  <%= f.text_field :tempo_name %> <br>
+
+  <%= f.label :担当者 %>
+  <%= f.text_field :manager %><br>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+
+  <%= f.submit '送信' %>
+<% end %>
+-------------------------------------------------------
 <%= form_tag ("/re_page/create") do %>
   <p>テナント名</p>
   <input name="tempo_name">
