@@ -3,14 +3,12 @@ class RePageController < ApplicationController
     end
 
     def create
-        inquiry = Inquiry.new(tempo_name: session[:tempo_name] ,
+        @inquiry = Inquiry.new(tempo_name: session[:tempo_name] ,
                               manager: session[:manager],
                               email: session[:email])
-        if inquiry.save
-            session[:tempo_name].clear
-            session[:manager].clear
-            session[:email].clear
+        if @inquiry.save
+            UserMailer.with(user: @inquiry).re_email.deliver
+            redirect_to("/re_page/re_end")
         end
-        redirect_to("/re_page/re_end")
     end
 end
