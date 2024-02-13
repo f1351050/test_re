@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get 're_page/re_end'
   get 're_page/mail_conf_end'
+
+  get 're_page/:unique_id', to: 're_page#show'
 end

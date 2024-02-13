@@ -4,7 +4,8 @@ class UserMailer < ApplicationMailer
 
     def re_email
         @user = params[:user]
-        @url = 'http://localhost:3000/re_page/mail_conf_end'
+        unique_id = @user.unique_id
+        @url = 'http://localhost:3000/re_page/' + unique_id
         mail(to: @user.email, subject:'testtest')
     end
 end
