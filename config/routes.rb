@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 're_page/conf' => "re_page#create"
 
   get 're_page/re_end'
+  get 're_page/mail_conf_end'
 end
